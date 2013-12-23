@@ -5,6 +5,8 @@
               [om.core :refer [update! IRender IDidMount IDidUpdate IWillMount get-state get-node set-state! build root]]
               [om.dom :refer [canvas div p]]))
 
+(js/React.initializeTouchEvents true)
+
 (def app-state (atom {:pattern (repeatedly 72 (partial rand-int 9))
                       :index   0}))
 
